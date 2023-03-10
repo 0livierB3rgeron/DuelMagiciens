@@ -9,10 +9,7 @@
 
 int main()
 {
-    Wand wand;
-    std::string str = wand.getStats();
-    
-    std::cout << str;
+
 }
 
     
