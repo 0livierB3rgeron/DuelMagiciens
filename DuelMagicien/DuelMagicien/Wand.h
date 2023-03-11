@@ -9,5 +9,6 @@ private:
 public:
 	Wand();
 	std::string getStats();
+	int getDamage(int);
 };
 

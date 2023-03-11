@@ -30,3 +30,8 @@ std::string Wand::getStats()
 
 	return str;
 }
+
+int Wand::getDamage(int index)
+{
+	return m_damages[index];
+}

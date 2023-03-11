@@ -43,7 +43,7 @@ int Wizard::castSpell()
     {
         std::cout << "Vous avez utilisez une attaque defensive." << std::endl;
     }
-    damage = m_wand.get_damage(rng); // A implementer
+    damage = m_wand.getDamage(rng); // A implementer
     return damage;
 }
 
