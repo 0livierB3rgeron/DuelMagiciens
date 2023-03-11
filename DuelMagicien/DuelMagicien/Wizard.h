@@ -29,11 +29,35 @@ class Wizard
      * @brief Lance un sort
      * @return Dommage infligé
      */
-    int castSpell();
+    void castSpell();
     /**
      * @brief Change de baguette
      * detruit l'ancienne et en crée une nouvelle
      */
     void swapWand();
+    /**
+     * @brief Verifie que le magicien est en vie
+     * @return Vrai si le magicien est en vie
+     */
+    bool alive();
+    /**
+     * @brief Enleve des points de vie au magicien ou modifie son bouclier
+     */
+    void takeDamage(int);
+
+    /**
+     * @brief Dommage du sort de notre attaque.
+     * @return int Dommage de l'attaque
+     */
+    int attack();
+    /**
+     * @brief ajoute des points au bouclier
+     */
+    void defend();
+
+    /**
+     * @brief Affiche les statistiques du magicien
+     */
+    void getStats();
 };
 
