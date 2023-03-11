@@ -2,10 +2,14 @@
 //
 
 #include <iostream>
+#include"Wand.h";
+#include<string>
+#include <stdlib.h>     
+#include <time.h>
 
 int main()
 {
-    
+
 }
 
     
