@@ -3,11 +3,13 @@
 #include "Constantes.h"
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 Wizard::Wizard()
 {
     // sors un nom aleatoire dans le tableau de nom de magicien
+    srand(time(NULL));
     int rng = rand() % 10;
     m_name = nom_magicien[rng];
     // Attribut par defaut
@@ -24,28 +26,6 @@ Wizard::Wizard(std::string nom)
     m_mana = 50;
     m_shield = 0;
     m_wand = Wand::Wand();
-}
-Wizard::~Wizard() {}
-
-void Wizard::castSpell()
-{
-    int damage{0};
-    if (m_mana < 10)
-    {
-        swapWand();
-        return;
-    }
-    // random between 0 and 1
-    int rng = rand() % 2;
-    if (rng == 0)
-    {
-        std::cout << "Vous avez utilisez une attaque offensive." << std::endl;
-    }
-    else
-    {
-        std::cout << "Vous avez utilisez une attaque defensive." << std::endl;
-    }
-    damage = m_wand.getDamage(rng);
 }
 
 void Wizard::swapWand()
@@ -106,6 +86,8 @@ void Wizard::defend()
     }
 }
 
+
+
 void Wizard::getStats()
 {
     std::cout << "Nom du magicien : " << m_name << std::endl;
@@ -114,4 +96,9 @@ void Wizard::getStats()
     std::cout << "Points de bouclier : " << m_shield << std::endl;
     std::cout << "Baguette : " << m_wand.getStats() << std::endl;
     std::cout << "===============================================" << std::endl;
+}
+
+int Wizard::getMana()
+{
+    return m_mana;
 }

@@ -16,20 +16,11 @@ class Wizard
      * @brief Constructeur par défaut
      */
     Wizard();
-        /**
+     /**
      * @brief Constructeur par paramètre
      * @param nom Nom du magicien
      */
     Wizard(std::string);
-    /**
-     * @brief Destructeur par défaut
-     */
-    ~Wizard();
-    /**
-     * @brief Lance un sort
-     * @return Dommage infligé
-     */
-    void castSpell();
     /**
      * @brief Change de baguette
      * detruit l'ancienne et en crée une nouvelle
@@ -59,5 +50,9 @@ class Wizard
      * @brief Affiche les statistiques du magicien
      */
     void getStats();
+    /**
+    * @brief Retourne le nombre de mana du magicien
+    */
+    int getMana();
 };
 
