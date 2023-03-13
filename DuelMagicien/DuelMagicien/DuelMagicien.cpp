@@ -3,7 +3,7 @@
 #include"Wizard.h";
 #include<string>
 
-void jouerTourJoueur(Wizard joueur, Wizard cpu) {
+void jouerTourJoueur(Wizard& joueur, Wizard& cpu) {
     
     int input = 0;
     
@@ -32,7 +32,7 @@ void jouerTourJoueur(Wizard joueur, Wizard cpu) {
 
 }
 
-void jouerTourCPU(Wizard cpu, Wizard joueur) {
+void jouerTourCPU(Wizard& cpu, Wizard& joueur) {
     
     //génération d'un chiffre aléatoire pour simuler le tour du CPU
     srand(time(NULL));

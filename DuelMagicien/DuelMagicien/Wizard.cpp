@@ -31,6 +31,7 @@ Wizard::Wizard(std::string nom)
 void Wizard::swapWand()
 {
     m_wand = Wand::Wand();
+    m_mana = 50;
     std::cout << "La baguette a ete changer." << std::endl;
 }
 
@@ -63,18 +64,20 @@ void Wizard::takeDamage(int damage)
     }
     else
     {
-        m_hp -= damage;
+        m_hp += damage;
     }
 }
 
 int Wizard::attack()
 {
+    m_mana -= 10;
     return m_wand.getDamage(0);
 }
 
 void Wizard::defend()
 {
-    if(m_wand.getDamage(1) > 0)
+    m_mana -= 10;
+    if(m_wand.getDamage(1) < 0)
     {
         // Si negatif, on ajoute des points de vie
         m_hp -= m_wand.getDamage(1);
